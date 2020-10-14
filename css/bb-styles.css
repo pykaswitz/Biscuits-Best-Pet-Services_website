@@ -1,0 +1,103 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.bblink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bblink:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.carousel-indicators li {
+    background-color: #6C757D;
+}
+
+.zoom img {
+    transition: 0.5s all ease-in-out;
+}
+
+.zoom:hover img {
+    transform: scale(1.125);
+}
+
+#bbLogo {
+    width: 20%;
+    height: 20%;
+}
+
+.tooltip .arrow {
+    display: none !important;
+}
+
+/* None of this CSS is required for the gallery and lightbox to function.*/
+
+/* --- BEGIN: crop images --- */
+/* Optional CSS for cropping images that aren't all the same size.*/
+
+/* Use Bootstrap breakpoints for consistency.*/
+/* --bootstrap-sm: 576px; */
+/* --bootstrap-md: 768px; */
+/* --bootstrap-lg: 992px; */
+/* --bootstrap-xl: 1200px; */
+
+/* Crop thumbnail images.*/
+#gallery img {
+    height: 75vw;
+    object-fit: cover;
+}
+
+/* Override padding in bootstrap col-* classes */
+#gallery div {
+    padding: 0;
+}
+
+@media (min-width: 576px) {
+    #gallery img {
+        height: 35vw;
+    }
+}
+
+@media (min-width: 992px) {
+    #gallery img {
+        height: 18vw;
+    }
+}
+
+
+/* Crop images in lightbox.*/
+.carousel-item img {
+    height: 60vw;
+    object-fit: cover;
+}
+
+@media (min-width: 576px) {
+    .carousel-item img {
+        height: auto;
+    }
+
+    #bbModal>.modal-dialog {
+        max-width: 30%;
+    }
+
+    /* #bbModal .carousel-item img {
+        height: 500px;
+    } */
+}
+/* 
+@media (min-width: 768px) {
+    #bbModal>.modal-dialog {
+        max-width: 50%;
+    }
+} */
+
+/* --- END: crop images --- */
