@@ -75,29 +75,26 @@ html {
 
 
 /* Crop images in lightbox.*/
-.carousel-item img {
+#bbModal .carousel-item img {
     height: 60vw;
     object-fit: cover;
 }
 
 @media (min-width: 576px) {
-    .carousel-item img {
+
+    #bbModal .modal-dialog {
+        max-width: 35vw;        
+    }
+
+    #bbModal .modal-content {
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    #bbModal .carousel-item img {
         height: auto;
     }
-
-    #bbModal>.modal-dialog {
-        max-width: 30%;
-    }
-
-    /* #bbModal .carousel-item img {
-        height: 500px;
-    } */
+    
 }
-/* 
-@media (min-width: 768px) {
-    #bbModal>.modal-dialog {
-        max-width: 50%;
-    }
-} */
 
 /* --- END: crop images --- */
